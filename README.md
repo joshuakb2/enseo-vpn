@@ -12,6 +12,8 @@ The browser will only need to ask you to authenticate if there are no valid cook
 
 You need to have openconnect installed on your system first. Specifically, "sudo openconnect" should be a valid command. The openconnect-sso package that this flake uses calls it that way and doesn't include openconnect as a dependency, so unless I fork openconnect-sso and fix that, you need to have your own openconnect installed system-wide.
 
+Also, as this is a flake, you need to have flakes enabled. `experimental-features = nix-command flakes`.
+
 ## NixOS
 
 Just run the flake: `nix run github:joshuakb2/enseo-vpn`.
